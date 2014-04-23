@@ -1,0 +1,2266 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/7/Ontology1313497711109.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2011/7/Ontology1313497711109.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Assurer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutoManufacturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Automobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomobileModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomobileModelVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomobileOwner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutomobilePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CascoInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InsuranceCompany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternationalInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MandatoryInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motorbike"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Party"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleMaker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#believesIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consistsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consistsOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChief"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFather"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInsurance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMother"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSparePart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAutomobilePartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isColleagueOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEmployedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInsuredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOfAutomobileModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartnerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProducedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#playsAssurerRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#playsAutomobileOwnerRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supplies"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#assurerLicenceNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automobileModelTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automobileModelVersionTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automobileNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automobilePartCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#automotiveIndustryType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#birthDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cascoInsuranceCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#certificationNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#companyCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#countryCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSidecar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#insuranceLicenceCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#insuredFromDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#insuredTillDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#internationalInsuranceCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#mileage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ownedFromDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ownedTillDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#partyCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#personCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#productionDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vehicleCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Assurer1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Assurer2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Assurer3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Automobile1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Automobile2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Car1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chassis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chassis2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Company1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Company2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Company3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Company4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Company5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DriveShaft1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DriveShaft2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Frame1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HondaCivic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insurance1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insurance2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insurance3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insurance4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motor1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motor2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motorbike1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Person1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Person2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Person3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Person4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Transmission1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UniversalJoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheel9"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Automobile"/>
+        <Class IRI="#Car"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Insurance"/>
+        <ObjectUnionOf>
+            <Class IRI="#CascoInsurance"/>
+            <Class IRI="#InternationalInsurance"/>
+            <Class IRI="#MandatoryInsurance"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Assurer"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isAssurerRoleOf"/>
+            <Class IRI="#Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assurer"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isEmployedBy"/>
+            <Class IRI="#InsuranceCompany"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assurer"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasChief"/>
+            <Class IRI="#Assurer"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assurer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#certificationNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutoManufacturer"/>
+        <Class IRI="#VehicleMaker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutoManufacturer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#automotiveIndustryType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInsurance"/>
+            <Class IRI="#Insurance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasInsurance"/>
+            <Class IRI="#Insurance"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <ObjectMinCardinality cardinality="5">
+            <ObjectProperty IRI="#isAssembledFrom"/>
+            <Class IRI="#AutomobilePart"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+            <Class IRI="#AutomobileModelVersion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <DataHasValue>
+            <DataProperty IRI="#countryCode"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">EN^^</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <DataHasValue>
+            <DataProperty IRI="#countryCode"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">LT^^</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Automobile"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#productionDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModel"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#automobileModelTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isSuppliedBy"/>
+            <NamedIndividual IRI="#Company1"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isSuppliedBy"/>
+            <NamedIndividual IRI="#Company3"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isSuppliedBy"/>
+            <NamedIndividual IRI="#Company4"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isOfAutomobileModel"/>
+            <Class IRI="#AutomobileModel"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#automobileModelVersionTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileModelVersion"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#automobileModelVersionNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileOwner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+            <Class IRI="#Party"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileOwner"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ownedFromDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobileOwner"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#ownedTillDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobilePart"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#consistsIn"/>
+            <Class IRI="#AutomobilePart"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobilePart"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#directlyConsistsIn"/>
+            <Class IRI="#AutomobilePart"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobilePart"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#directlyConsistsIn"/>
+            <Class IRI="#AutomobilePart"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutomobilePart"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#automobilePartCode"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CascoInsurance"/>
+        <Class IRI="#Insurance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CascoInsurance"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#cascoInsuranceCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isInsuredBy"/>
+            <Class IRI="#Assurer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isInsurranceOf"/>
+            <Class IRI="#Automobile"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurance"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#insuredFromDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsuranceCompany"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsuranceCompany"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#insuranceLicenceCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternationalInsurance"/>
+        <Class IRI="#Insurance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternationalInsurance"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#internationalInsuranceCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MandatoryInsurance"/>
+        <Class IRI="#Insurance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MandatoryInsurance"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#mandatoryInsuranceCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorbike"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorbike"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSidecar"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorbike"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Party"/>
+        <ObjectUnionOf>
+            <Class IRI="#Organization"/>
+            <Class IRI="#Person"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#believesIn"/>
+            <Class IRI="#Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectHasSelf>
+            <ObjectProperty IRI="#believesIn"/>
+        </ObjectHasSelf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#mileage"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#mileage"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#vehicleCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VehicleMaker"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VehicleMaker"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#vehicleLicenceCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Automobile"/>
+        <Class IRI="#Motorbike"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CascoInsurance"/>
+        <Class IRI="#InternationalInsurance"/>
+        <Class IRI="#MandatoryInsurance"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#InsuranceCompany"/>
+        <Class IRI="#VehicleMaker"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="#Insurance"/>
+        <Class IRI="#CascoInsurance"/>
+        <Class IRI="#InternationalInsurance"/>
+        <Class IRI="#MandatoryInsurance"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Party"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Person"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#AutomobileModelVersion"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assurer"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assurer"/>
+        <NamedIndividual IRI="#Assurer2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assurer"/>
+        <NamedIndividual IRI="#Assurer3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Automobile"/>
+        <NamedIndividual IRI="#Automobile1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Automobile"/>
+        <NamedIndividual IRI="#Automobile2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobileOwner"/>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobileOwner"/>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#Car1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Chassis2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutoManufacturer"/>
+        <NamedIndividual IRI="#Company1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InsuranceCompany"/>
+        <NamedIndividual IRI="#Company2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutoManufacturer"/>
+        <NamedIndividual IRI="#Company3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutoManufacturer"/>
+        <NamedIndividual IRI="#Company4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleMaker"/>
+        <NamedIndividual IRI="#Company5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobileModel"/>
+        <NamedIndividual IRI="#HondaCivic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MandatoryInsurance"/>
+        <NamedIndividual IRI="#Insurance1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MandatoryInsurance"/>
+        <NamedIndividual IRI="#Insurance2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CascoInsurance"/>
+        <NamedIndividual IRI="#Insurance3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InternationalInsurance"/>
+        <NamedIndividual IRI="#Insurance4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Motor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Motor2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Motorbike"/>
+        <NamedIndividual IRI="#Motorbike1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Person1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Person2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Person3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Person4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Transmission1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AutomobilePart"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Car1"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Assurer1"/>
+        <NamedIndividual IRI="#Assurer2"/>
+        <NamedIndividual IRI="#Assurer3"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Chassis1"/>
+        <NamedIndividual IRI="#Chassis2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Chassis1"/>
+        <NamedIndividual IRI="#Chassis2"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Chassis1"/>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#Wheel1"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <NamedIndividual IRI="#Wheel4"/>
+        <NamedIndividual IRI="#Wheel5"/>
+        <NamedIndividual IRI="#Wheel6"/>
+        <NamedIndividual IRI="#Wheel7"/>
+        <NamedIndividual IRI="#Wheel8"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Company1"/>
+        <NamedIndividual IRI="#Company2"/>
+        <NamedIndividual IRI="#Company3"/>
+        <NamedIndividual IRI="#Company4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#DriveShaft1"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#DriveShaft1"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+        <NamedIndividual IRI="#Frame1"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Frame1"/>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#Wheel1"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <NamedIndividual IRI="#Wheel4"/>
+        <NamedIndividual IRI="#Wheel5"/>
+        <NamedIndividual IRI="#Wheel6"/>
+        <NamedIndividual IRI="#Wheel7"/>
+        <NamedIndividual IRI="#Wheel8"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Insurance1"/>
+        <NamedIndividual IRI="#Insurance2"/>
+        <NamedIndividual IRI="#Insurance3"/>
+        <NamedIndividual IRI="#Insurance4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Motor1"/>
+        <NamedIndividual IRI="#Motor2"/>
+        <NamedIndividual IRI="#Wheel5"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Motor1"/>
+        <NamedIndividual IRI="#Motor2"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Motor1"/>
+        <NamedIndividual IRI="#Wheel4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Person1"/>
+        <NamedIndividual IRI="#Person2"/>
+        <NamedIndividual IRI="#Person3"/>
+        <NamedIndividual IRI="#Person4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#Wheel1"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <NamedIndividual IRI="#Wheel4"/>
+        <NamedIndividual IRI="#Wheel5"/>
+        <NamedIndividual IRI="#Wheel6"/>
+        <NamedIndividual IRI="#Wheel7"/>
+        <NamedIndividual IRI="#Wheel8"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#Wheel4"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Wheel1"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <NamedIndividual IRI="#Wheel4"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOfAutomobileModel"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <NamedIndividual IRI="#HondaCivic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <NamedIndividual IRI="#Company4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <NamedIndividual IRI="#Company3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChief"/>
+        <NamedIndividual IRI="#Assurer1"/>
+        <NamedIndividual IRI="#Assurer3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+        <NamedIndividual IRI="#Assurer1"/>
+        <NamedIndividual IRI="#Person2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <NamedIndividual IRI="#Assurer1"/>
+        <NamedIndividual IRI="#Company2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChief"/>
+        <NamedIndividual IRI="#Assurer2"/>
+        <NamedIndividual IRI="#Assurer3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <NamedIndividual IRI="#Assurer2"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <NamedIndividual IRI="#Assurer2"/>
+        <NamedIndividual IRI="#Company2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+        <NamedIndividual IRI="#Assurer3"/>
+        <NamedIndividual IRI="#Person4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <NamedIndividual IRI="#Assurer3"/>
+        <NamedIndividual IRI="#Company2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSparePart"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Wheel9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Motor1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Wheel3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Wheel4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Wheel1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Wheel2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <NamedIndividual IRI="#Company1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Wheel8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Wheel6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Wheel7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Chassis2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Wheel5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Motor2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <NamedIndividual IRI="#Company1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+        <NamedIndividual IRI="#Person1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+        <NamedIndividual IRI="#Person2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+        <NamedIndividual IRI="#Chassis2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+        <NamedIndividual IRI="#Chassis2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Frame1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <NamedIndividual IRI="#Frame1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <NamedIndividual IRI="#Insurance1"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <NamedIndividual IRI="#Insurance1"/>
+        <NamedIndividual IRI="#Automobile1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <NamedIndividual IRI="#Insurance2"/>
+        <NamedIndividual IRI="#Assurer2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <NamedIndividual IRI="#Insurance2"/>
+        <NamedIndividual IRI="#Automobile2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <NamedIndividual IRI="#Insurance3"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <NamedIndividual IRI="#Insurance3"/>
+        <NamedIndividual IRI="#Automobile1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <NamedIndividual IRI="#Insurance4"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <NamedIndividual IRI="#Insurance4"/>
+        <NamedIndividual IRI="#Automobile1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#believesIn"/>
+        <NamedIndividual IRI="#Person2"/>
+        <NamedIndividual IRI="#Person1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#playsAssurerRole"/>
+        <NamedIndividual IRI="#Person2"/>
+        <NamedIndividual IRI="#Assurer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Person3"/>
+        <NamedIndividual IRI="#Person2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Person3"/>
+        <NamedIndividual IRI="#Person1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#playsAssurerRole"/>
+        <NamedIndividual IRI="#Person3"/>
+        <NamedIndividual IRI="#Assurer2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <NamedIndividual IRI="#Transmission1"/>
+        <NamedIndividual IRI="#Chassis1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Wheel1"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsIn"/>
+        <NamedIndividual IRI="#Wheel4"/>
+        <NamedIndividual IRI="#Frame1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <Literal datatypeIRI="&xsd;string">2011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileModelVersionTitle"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <Literal datatypeIRI="&xsd;string">2011HondaC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileModelVersionTitle"/>
+        <NamedIndividual IRI="#2011HondaCivic"/>
+        <Literal datatypeIRI="&xsd;string">2011 Honda Civic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#certificationNumber"/>
+        <NamedIndividual IRI="#Assurer1"/>
+        <Literal datatypeIRI="&xsd;string">111111</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#certificationNumber"/>
+        <NamedIndividual IRI="#Assurer2"/>
+        <Literal datatypeIRI="&xsd;string">111112</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#certificationNumber"/>
+        <NamedIndividual IRI="#Assurer3"/>
+        <Literal datatypeIRI="&xsd;string">111113</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileNumber"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <Literal datatypeIRI="&xsd;string">136</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countryCode"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <Literal datatypeIRI="&xsd;string">LT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mileage"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <Literal datatypeIRI="&xsd;integer">600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#productionDate"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-05-05T12:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleCode"/>
+        <NamedIndividual IRI="#Automobile1"/>
+        <Literal datatypeIRI="&xsd;string">LT136</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileNumber"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <Literal datatypeIRI="&xsd;string">137</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countryCode"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <Literal datatypeIRI="&xsd;string">EN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#productionDate"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-01-03T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleCode"/>
+        <NamedIndividual IRI="#Automobile2"/>
+        <Literal datatypeIRI="&xsd;string">EN137</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ownedFromDate"/>
+        <NamedIndividual IRI="#AutomobileOwner1"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-01-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ownedFromDate"/>
+        <NamedIndividual IRI="#AutomobileOwner2"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-03-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Chassis1"/>
+        <Literal datatypeIRI="&xsd;string">APC-Chassis1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Chassis2"/>
+        <Literal datatypeIRI="&xsd;string">APC-Chassis2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automotiveIndustryType"/>
+        <NamedIndividual IRI="#Company1"/>
+        <Literal datatypeIRI="&xsd;string">AutoManufacturing</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#companyCode"/>
+        <NamedIndividual IRI="#Company1"/>
+        <Literal datatypeIRI="&xsd;string">CC1133</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <NamedIndividual IRI="#Company1"/>
+        <Literal datatypeIRI="&xsd;string">VLC8766</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#companyCode"/>
+        <NamedIndividual IRI="#Company2"/>
+        <Literal datatypeIRI="&xsd;string">CC5632</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#insuranceLicenceCode"/>
+        <NamedIndividual IRI="#Company2"/>
+        <Literal datatypeIRI="&xsd;string">ILC3459</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#companyCode"/>
+        <NamedIndividual IRI="#Company3"/>
+        <Literal datatypeIRI="&xsd;string">CC1477</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <NamedIndividual IRI="#Company3"/>
+        <Literal datatypeIRI="&xsd;string">VLC6825</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#companyCode"/>
+        <NamedIndividual IRI="#Company4"/>
+        <Literal datatypeIRI="&xsd;string">CC1788</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <NamedIndividual IRI="#Company4"/>
+        <Literal datatypeIRI="&xsd;string">VLC2345</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#companyCode"/>
+        <NamedIndividual IRI="#Company5"/>
+        <Literal datatypeIRI="&xsd;string">CC1234</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <NamedIndividual IRI="#Company5"/>
+        <Literal datatypeIRI="&xsd;string">VLC2323</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#DriveShaft1"/>
+        <Literal datatypeIRI="&xsd;string">APC-DriveShaft1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#DriveShaft2"/>
+        <Literal datatypeIRI="&xsd;string">APC-DriveShaft2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Frame1"/>
+        <Literal datatypeIRI="&xsd;string">APC-Frame1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobileModelTitle"/>
+        <NamedIndividual IRI="#HondaCivic"/>
+        <Literal datatypeIRI="&xsd;string">HondaCivic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#insuredFromDate"/>
+        <NamedIndividual IRI="#Insurance1"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-05-06T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+        <NamedIndividual IRI="#Insurance1"/>
+        <Literal datatypeIRI="&xsd;string">MIC4567</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#insuredFromDate"/>
+        <NamedIndividual IRI="#Insurance2"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-02-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+        <NamedIndividual IRI="#Insurance2"/>
+        <Literal datatypeIRI="&xsd;string">MIC3444</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cascoInsuranceCode"/>
+        <NamedIndividual IRI="#Insurance3"/>
+        <Literal datatypeIRI="&xsd;string">CIC8899</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#insuredFromDate"/>
+        <NamedIndividual IRI="#Insurance3"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-01-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#insuredFromDate"/>
+        <NamedIndividual IRI="#Insurance4"/>
+        <Literal datatypeIRI="&xsd;dateTime">2011-01-20T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#internationalInsuranceCode"/>
+        <NamedIndividual IRI="#Insurance4"/>
+        <Literal datatypeIRI="&xsd;string">IIC3966</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Motor1"/>
+        <Literal datatypeIRI="&xsd;string">APC-Motor1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Motor2"/>
+        <Literal datatypeIRI="&xsd;string">APC-Motor2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSidecar"/>
+        <NamedIndividual IRI="#Motorbike1"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+        <NamedIndividual IRI="#Motorbike1"/>
+        <Literal datatypeIRI="&xsd;string">2012YAMAHA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#vehicleCode"/>
+        <NamedIndividual IRI="#Motorbike1"/>
+        <Literal datatypeIRI="&xsd;string">LT455</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#personCode"/>
+        <NamedIndividual IRI="#Person1"/>
+        <Literal datatypeIRI="&xsd;string">PC123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#personCode"/>
+        <NamedIndividual IRI="#Person2"/>
+        <Literal datatypeIRI="&xsd;string">PC124</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#personCode"/>
+        <NamedIndividual IRI="#Person3"/>
+        <Literal datatypeIRI="&xsd;string">PC125</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#personCode"/>
+        <NamedIndividual IRI="#Person4"/>
+        <Literal datatypeIRI="&xsd;string">PC126</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Transmission1"/>
+        <Literal datatypeIRI="&xsd;string">APC-Transmission1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#UniversalJoint"/>
+        <Literal datatypeIRI="&xsd;string">APC-UniversalJoint</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel1"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel2"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel3"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel4"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel5"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel6"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel7"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel8"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#automobilePartCode"/>
+        <NamedIndividual IRI="#Wheel9"/>
+        <Literal datatypeIRI="&xsd;string">APC-Wheel9</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <ObjectProperty IRI="#isPartnerOf"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <ObjectProperty IRI="#hasMaker"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#consistsIn"/>
+        <ObjectProperty IRI="#consistsOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasInsurance"/>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAutomobilePartOf"/>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+        <ObjectProperty IRI="#playsAssurerRole"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+        <ObjectProperty IRI="#playsAutomobileOwnerRole"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#supplies"/>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasChief"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFather"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMaker"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMother"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isEmployedBy"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isInsuredBy"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isProducedBy"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSparePart"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isColleagueOf"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasChief"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasFather"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasMother"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#consistsIn"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#consistsOf"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasFather"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasMother"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#believesIn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consistsIn"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChief"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFather"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaker"/>
+        <Class IRI="#Vehicle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMother"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSparePart"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+        <Class IRI="#AutomobileOwner"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <Class IRI="#Insurance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <Class IRI="#Insurance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOfAutomobileModel"/>
+        <Class IRI="#AutomobileModelVersion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <Class IRI="#AutomobileModelVersion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+        <Class IRI="#Insurance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#believesIn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consistsIn"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#directlyConsistsIn"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAutomobileOwner"/>
+        <Class IRI="#AutomobileOwner"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChief"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFather"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaker"/>
+        <Class IRI="#VehicleMaker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMother"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSparePart"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+        <Class IRI="#AutomobilePart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAssurerRoleOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAutomobileOwnerRoleOf"/>
+        <Class IRI="#Party"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isColleagueOf"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <Class IRI="#InsuranceCompany"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInsuredBy"/>
+        <Class IRI="#Assurer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInsurranceOf"/>
+        <Class IRI="#Automobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOfAutomobileModel"/>
+        <Class IRI="#AutomobileModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOfAutomobileModelVersion"/>
+        <Class IRI="#AutomobileModelVersion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isProducedBy"/>
+        <Class IRI="#AutoManufacturer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <Class IRI="#AutoManufacturer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+        <Class IRI="#InsuranceCompany"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasFather"/>
+        <ObjectProperty IRI="#hasMother"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasSparePart"/>
+        <ObjectProperty IRI="#isAssembledFrom"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#playsAssurerRole"/>
+        <ObjectProperty IRI="#playsAutomobileOwnerRole"/>
+    </DisjointObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isInsuredBy"/>
+            <ObjectProperty IRI="#isEmployedBy"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+    </SubObjectPropertyOf>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#assurerLicenceNumber"/>
+        <DataProperty IRI="#certificationNumber"/>
+    </EquivalentDataProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#assurerLicenceNumber"/>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#companyCode"/>
+        <DataProperty IRI="#partyCode"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#personCode"/>
+        <DataProperty IRI="#partyCode"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#automobilePartCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#automotiveIndustryType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#birthDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#cascoInsuranceCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#companyCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#insuranceLicenceCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#insuredTillDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#internationalInsuranceCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#mileage"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#partyCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#personCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#vehicleCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automobileModelTitle"/>
+        <Class IRI="#AutomobileModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+        <Class IRI="#AutomobileModelVersion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automobileModelVersionTitle"/>
+        <Class IRI="#AutomobileModelVersion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automobileNumber"/>
+        <Class IRI="#Automobile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automobilePartCode"/>
+        <Class IRI="#AutomobilePart"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#automotiveIndustryType"/>
+        <Class IRI="#AutoManufacturer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#birthDate"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cascoInsuranceCode"/>
+        <Class IRI="#CascoInsurance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#certificationNumber"/>
+        <Class IRI="#Assurer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#countryCode"/>
+        <Class IRI="#Automobile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSidecar"/>
+        <Class IRI="#Motorbike"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#insuranceLicenceCode"/>
+        <Class IRI="#InsuranceCompany"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#insuredFromDate"/>
+        <Class IRI="#Insurance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#insuredTillDate"/>
+        <Class IRI="#Insurance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#internationalInsuranceCode"/>
+        <Class IRI="#InternationalInsurance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+        <Class IRI="#Motorbike"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+        <Class IRI="#MandatoryInsurance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#mileage"/>
+        <Class IRI="#Vehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ownedFromDate"/>
+        <Class IRI="#AutomobileOwner"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ownedTillDate"/>
+        <Class IRI="#AutomobileOwner"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#partyCode"/>
+        <Class IRI="#Party"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#personCode"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#productionDate"/>
+        <Class IRI="#Automobile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vehicleCode"/>
+        <Class IRI="#Vehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <Class IRI="#VehicleMaker"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#assurerLicenceNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automobileModelTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automobileModelVersionTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automobileNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automobilePartCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#automotiveIndustryType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#birthDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cascoInsuranceCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#certificationNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#countryCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSidecar"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#insuranceLicenceCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#insuredFromDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#insuredTillDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#internationalInsuranceCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isOfMotorbikeModelVersion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#mandatoryInsuranceCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#mileage"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ownedFromDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ownedTillDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#partyCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#personCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#productionDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vehicleCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vehicleLicenceCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#companyCode"/>
+        <DataProperty IRI="#personCode"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#insuredFromDate"/>
+        <DataProperty IRI="#insuredTillDate"/>
+    </DisjointDataProperties>
+    <HasKey>
+        <Class IRI="#Automobile"/>
+        <DataProperty IRI="#automobileNumber"/>
+        <DataProperty IRI="#countryCode"/>
+    </HasKey>
+    <HasKey>
+        <Class IRI="#AutomobileModel"/>
+        <DataProperty IRI="#automobileModelTitle"/>
+    </HasKey>
+    <HasKey>
+        <Class IRI="#AutomobileModelVersion"/>
+        <ObjectProperty IRI="#isOfAutomobileModel"/>
+        <DataProperty IRI="#automobileModelVersionNumber"/>
+    </HasKey>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Company1</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Honda Motor Company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Party</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">A person or group involved in an enterprise; a participant or an accessory.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Party</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Free online dictionary http://www.thefreedictionary.com/party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Party</IRI>
+        <Literal datatypeIRI="&xsd;string">Party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Party</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAssembledFrom</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">To bring or call together into a group or whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isAssembledFrom</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Free online dictionary http://www.thefreedictionary.com/party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAssembledFrom</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Is assembled from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isAssembledFrom</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">To gather together; congregate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#mileage</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Total miles covered or traveled in a given time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#mileage</IRI>
+        <Literal datatypeIRI="&rdfs;Literal">Free online dictionary http://www.thefreedictionary.com/party</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

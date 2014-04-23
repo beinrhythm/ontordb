@@ -1,0 +1,1581 @@
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnumber is primary key for table- Department
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dno is primary key for table- departments
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Mgr_ssn is foreign key from table- <Department> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_emp
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is primary key for table- Dependent
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dependent> is sub-class of <Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_emp> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is foreign key from table- <Dependent> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_emp
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dependent_name is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_emp> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dept_Locations> is sub-class of <Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is foreign key from table- <Dept_Locations> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dlocation is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Ssn is primary key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_manager> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Fname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_manager
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_manager> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - eno is primary key for table- employees
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- salaries
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <salaries> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Lname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <salaries> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is foreign key from table- <Employee> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- salaries
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is unique key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- titles
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <titles> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <titles> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dno is foreign key from table- <Employee> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - title is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pnumber is primary key for table- Project
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnum is foreign key from table- <Project> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is foreign key from table- <Works_On> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Project>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is foreign key from table- <Works_On> to-<Project>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - EMPLOYEE ontology created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - COMPANY ontology created
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 91 Logical Axioms: 72]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 63 Logical Axioms: 50]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Ontolgies are merged
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Foreign Keys created!
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnumber is primary key for table- Department
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dno is primary key for table- departments
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Mgr_ssn is foreign key from table- <Department> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_emp
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is primary key for table- Dependent
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dependent> is sub-class of <Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_emp> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is foreign key from table- <Dependent> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_emp
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dependent_name is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_emp> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dept_Locations> is sub-class of <Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is foreign key from table- <Dept_Locations> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dlocation is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Ssn is primary key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_manager> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Fname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_manager
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_manager> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - eno is primary key for table- employees
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- salaries
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Lname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <salaries> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <salaries> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is foreign key from table- <Employee> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- salaries
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is unique key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dno is foreign key from table- <Employee> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <titles> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <titles> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pnumber is primary key for table- Project
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - title is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnum is foreign key from table- <Project> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is foreign key from table- <Works_On> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Project>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is foreign key from table- <Works_On> to-<Project>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - EMPLOYEE ontology created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - COMPANY ontology created
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 91 Logical Axioms: 72]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 63 Logical Axioms: 50]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Ontolgies are merged
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Foreign Keys created!
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dno is primary key for table- departments
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnumber is primary key for table- Department
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Mgr_ssn is foreign key from table- <Department> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_emp
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dependent> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is foreign key from table- <Dependent> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_emp> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dependent_name is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_emp
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_emp> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dept_Locations> is sub-class of <Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is foreign key from table- <Dept_Locations> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dlocation is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_manager> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Ssn is primary key for table- Employee
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Fname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_manager
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_manager> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - eno is primary key for table- employees
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- salaries
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <salaries> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <salaries> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- salaries
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- titles
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <titles> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <titles> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - title is primary key for table- titles
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Lname is not null in table- Employee
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is foreign key from table- <Employee> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is unique key for table- Employee
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dno is foreign key from table- <Employee> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pnumber is primary key for table- Project
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnum is foreign key from table- <Project> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is foreign key from table- <Works_On> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Project>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is foreign key from table- <Works_On> to-<Project>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - EMPLOYEE ontology created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - COMPANY ontology created
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 91 Logical Axioms: 72]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 63 Logical Axioms: 50]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Ontolgies are merged
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnumber is primary key for table- Department
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dno is primary key for table- departments
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Mgr_ssn is foreign key from table- <Department> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_emp
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is primary key for table- Dependent
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dependent> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is foreign key from table- <Dependent> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_emp> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dependent_name is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_emp
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dept_Locations> is sub-class of <Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_emp> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is foreign key from table- <Dept_Locations> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dlocation is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Ssn is primary key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Fname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_manager> to-<departments>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_manager
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_manager> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - eno is primary key for table- employees
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Lname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- salaries
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is foreign key from table- <Employee> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <salaries> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is unique key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <salaries> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- salaries
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dno is foreign key from table- <Employee> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pnumber is primary key for table- Project
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <titles> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnum is foreign key from table- <Project> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <titles> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is primary key for table- Works_On
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - title is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is foreign key from table- <Works_On> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Project>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is foreign key from table- <Works_On> to-<Project>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - EMPLOYEE ontology created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - COMPANY ontology created
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 91 Logical Axioms: 72]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 63 Logical Axioms: 50]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Ontolgies are merged
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Foreign Keys created!
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Creating ontology: Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 0 Logical Axioms: 0]
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Total tables converted into owl class = 6
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dno is primary key for table- departments
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnumber is primary key for table- Department
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Mgr_ssn is foreign key from table- <Department> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_emp
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is primary key for table- Dependent
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dependent> is sub-class of <Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_emp> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - EmSsn is foreign key from table- <Dependent> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_emp
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dependent_name is primary key for table- Dependent
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_emp> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_emp> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Dept_Locations> is sub-class of <Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dn is foreign key from table- <Dept_Locations> to-<Department>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dlocation is primary key for table- Dept_Locations
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - dept_no is foreign key from table- <dept_manager> to-<departments>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Ssn is primary key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- dept_manager
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Fname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <dept_manager> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <dept_manager> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - eno is primary key for table- employees
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- salaries
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <salaries> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <salaries> to-<employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- salaries
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Lname is not null in table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - <titles> is sub-class of <employees>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - emp_no is foreign key from table- <titles> to-<employees>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is foreign key from table- <Employee> to-<Employee>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - title is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Super_ssn is unique key for table- Employee
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - from_date is primary key for table- titles
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dno is foreign key from table- <Employee> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pnumber is primary key for table- Project
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Dnum is foreign key from table- <Project> to-<Department>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Essn is foreign key from table- <Works_On> to-<Employee>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is primary key for table- Works_On
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - <Works_On> is sub-class of <Project>
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - Pno is foreign key from table- <Works_On> to-<Project>
+INFO Thread-3 com.thesis.rdbtoowl.tasks.CreateOntology - EMPLOYEE ontology created
+INFO Thread-2 com.thesis.rdbtoowl.tasks.CreateOntology - COMPANY ontology created
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<COMPANY>))) [Axioms: 91 Logical Axioms: 72]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Merging ontology- Ontology(OntologyID(OntologyIRI(<EMPLOYEE>))) [Axioms: 63 Logical Axioms: 50]
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.MergeOntology - Ontolgies are merged
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+INFO Thread-4 com.thesis.rdbtoowl.mysql.MySQLDbManager - Foreign Keys created!
+WARN AWT-EventQueue-0 org.apache.jena.riot - {W109} The namespace URI: <MergedOntology#> is relative. Such use has been deprecated by the W3C, and may result in RDF interoperability failures. Use an absolute namespace URI.
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- title
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column title has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table titles
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dno is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Super_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is unique key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Super_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Fname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Fname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn is primary key for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Ssn has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Lname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname is not null for table Employee
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Lname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Sex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Sex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Address
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Address has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Bdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Bdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Minit
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Minit has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 10
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dn is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dlocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation is primary key for table Dept_Locations
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dlocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pno is foreign key referring to Project.Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Essn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is primary key for table Works_On
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Essn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Hours
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Hours has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 3
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_emp
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_no is foreign key referring to departments.dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table dept_manager
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- hire_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column hire_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno is primary key for table employees
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column eno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- last_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column last_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- first_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column first_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- birth_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column birth_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- gender
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column gender has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 6
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_ssn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber is primary key for table Department
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Mgr_start_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Mgr_start_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- EmSsn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column EmSsn is foreign key referring to Employee.Ssn
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dsex
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dsex has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Relationship
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Relationship has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- DBdate
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column DBdate has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dependent_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name is primary key for table Dependent
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dependent_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 5
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dept_name
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dept_name has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- dno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno is primary key for table departments
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column dno has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 2
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- emp_no
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column emp_no is foreign key referring to employees.eno
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- to_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column to_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- salary
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column salary has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- from_date
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date is primary key for table salaries
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column from_date has range DATE
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating table - Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Dnum
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Dnum is foreign key referring to Department.Dnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Plocation
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Plocation has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pname
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pname has range VARCHAR(45)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Creating column- Pnumber
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber is primary key for table Project
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Column Pnumber has range INT(11)
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Total properties- 4
+INFO AWT-EventQueue-0 com.thesis.rdbtoowl.tasks.CreateSchemaJENA - Tables created
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table titles created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Employee created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dept_Locations created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Works_On created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_emp created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table dept_manager created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table employees created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Department created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Dependent created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table departments created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table salaries created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Table Project created!
+INFO Thread-5 com.thesis.rdbtoowl.mysql.MySQLDbManager - Foreign Keys created!
