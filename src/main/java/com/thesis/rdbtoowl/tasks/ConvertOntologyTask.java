@@ -41,7 +41,7 @@ public class ConvertOntologyTask {
         try {
             this.dbManager = DatabaseManagerFactory.getDbManagerInstance(
                     connection, driver);
-            tables =  new CreateSchemaJENA(console).getTables();
+            tables =  new CreateSchema(console).getTables();
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,5 +1,6 @@
 package com.thesis.rdbtoowl;
 
+import com.google.common.base.Strings;
 import com.thesis.rdbtoowl.interfaces.*;
 import com.thesis.rdbtoowl.interfaces.constants.*;
 import com.thesis.rdbtoowl.tasks.*;
@@ -94,16 +95,11 @@ public class Trigger extends JPanel
     GridBagConstraints cSQL;
     private JButton btAddSchema;
     private JButton btRemoveSchema;
-    private JButton btAddSQL;
-    private JButton btRemoveSQL;
     private JButton btConvertSchema;
     private JButton btMergeSchema;
-    private JButton btMergeSQL;
     private JButton btConvertOntology;
-    private JButton btConvertOntologyFromSQL;
     private JButton btSaveSettings;
     private JButton btReloadConnection;
-    private JButton btConvertSQL;
     private JButton btAddConnection;
     private JButton btDeleteConnection;
     private JPanel panelConfig;
@@ -111,7 +107,7 @@ public class Trigger extends JPanel
     private JTree treeExport;
     private DefaultTreeModel exportTreeModel;
     private JTextArea textArea;
-    private JTextArea  console;
+    private JTextArea console;
     private JComboBox<String> connectionList;
     private DefaultMutableTreeNode topExport;
     private RelationalOWLProperties props;
@@ -188,13 +184,13 @@ public class Trigger extends JPanel
         cSQL = new GridBagConstraints();
         JTabbedPane tabbedPane = new JTabbedPane();
         JComponent panel1 = createConvertSchemaPanel();
-       // JComponent panel2 = createConvertSQLPanel();
+        // JComponent panel2 = createConvertSQLPanel();
         JComponent panel3 = createConfigPanel();
         JComponent panel4 = makeConsolePanel();
 
 
         tabbedPane.addTab("Schema", panel1);
-       // tabbedPane.addTab("SQL", panel2);
+        // tabbedPane.addTab("SQL", panel2);
         tabbedPane.addTab("Config", panel3);
         tabbedPane.addTab("Logger", panel4);
 
@@ -229,82 +225,6 @@ public class Trigger extends JPanel
                 }
             }
         });
-    }
-
-    protected JComponent createConvertSQLPanel() {
-        panelSQLInputData = new JPanel();
-        JPanel panelButtons = new JPanel();
-        sqlPanelRight = new JPanel();
-        panelButtons.setLayout(new FlowLayout());
-        sqlPanelRight.setLayout(new BorderLayout());
-        panelSQLInputData.setLayout(new GridBagLayout());
-
-
-        btConvertSQL = new JButton("Convert SQL");
-        btConvertSQL.addActionListener(this);
-        btMergeSQL = new JButton("Merge");
-        btMergeSQL.addActionListener(this);
-        btMergeSQL.setEnabled(false);
-        btConvertOntologyFromSQL = new JButton("Convert Ontology");
-        btConvertOntologyFromSQL.addActionListener(this);
-        btConvertOntologyFromSQL.setEnabled(false);
-
-        btAddSQL = new JButton("+");
-        btAddSQL.addActionListener(this);
-
-        btRemoveSQL = new JButton("-");
-        btRemoveSQL.addActionListener(this);
-        btRemoveSQL.setEnabled(false);
-
-        cSQL.insets = new Insets(2, 2, 2, 2);
-        cSQL.anchor = 17;
-        cSQL.gridx = 0;
-        cSQL.gridy = 2;
-        panelSQLInputData.add(lblExportSQL, cSQL);
-
-        cSQL.gridx = 1;
-        cSQL.gridy = 2;
-        cSQL.gridwidth = 4;
-        cSQL.weightx = 0.0D;
-        cSQL.fill = 1;
-        JScrollPane scroll = new JScrollPane(textArea);
-        panelSQLInputData.add(scroll, cSQL);
-
-        cSQL.gridx = 5;
-        cSQL.gridy = 2;
-        cSQL.weightx = 0.0D;
-        cSQL.gridwidth = 1;
-        cSQL.fill = 0;
-        panelSQLInputData.add(btAddSQL, cSQL);
-
-        cSQL.gridx = 6;
-        cSQL.gridy = 2;
-        cSQL.weightx = 0.0D;
-        cSQL.gridwidth = 1;
-        cSQL.fill = 0;
-        panelSQLInputData.add(btRemoveSQL, cSQL);
-
-        cSQL.gridx = 4;
-        cSQL.gridy = 1;
-        cSQL.gridwidth = 4;
-        cSQL.weightx = 0.0D;
-        cSQL.fill = 17;
-        panelButtons.add(btConvertSQL);
-        panelButtons.add(btMergeSQL);
-        panelButtons.add(btConvertOntologyFromSQL);
-        panelSQLInputData.add(panelButtons, cSQL);
-
-        JPanel panelProgress = new JPanel(new FlowLayout(1));
-        panelProgress.add(sqlConvert, cSQL);
-
-        sqlPanelRight.add(panelSQLInputData, "North");
-        sqlPanelRight.add(panelProgress, "South");
-
-        JSplitPane splitPane = new JSplitPane(1);
-        splitPane.setDividerLocation(250);
-        splitPane.setRightComponent(sqlPanelRight);
-
-        return splitPane;
     }
 
     protected JComponent createConvertSchemaPanel() {
@@ -547,7 +467,7 @@ public class Trigger extends JPanel
         panelConsole.setLayout(new BorderLayout());
         console = new JTextArea(40, 40);
         console.setEditable(false);
-        JScrollPane scrollPane =new JScrollPane(console,22,32);
+        JScrollPane scrollPane = new JScrollPane(console, 22, 32);
         panelConsole.add(scrollPane, "North");
         return panelConsole;
 
@@ -855,67 +775,6 @@ public class Trigger extends JPanel
 
         }
 
-        if (e.getSource() == btAddSQL) {
-
-            if (sqlIndexer > 4) {
-
-                JOptionPane.showMessageDialog(new JFrame(), "You hit the limit", "Error",
-                        JOptionPane.ERROR_MESSAGE);
-            } else {
-
-                JTextArea textArea = new JTextArea(2, 20);
-                textArea.setText("");
-                textArea = new JTextArea(2, 20);
-                textArea.setLineWrap(true);
-                textArea.setWrapStyleWord(true);
-                listOfSQL.add(textArea);
-                mapOfSQLLabel.put(textArea, lblExportSQL);
-
-                textArea.addFocusListener(new FocusListener() {
-                    public void focusGained(FocusEvent e) {
-                    }
-
-                    public void focusLost(FocusEvent e) {
-                    }
-                });
-
-                cSQL.gridx = 0;
-                cSQL.gridy = 2 + sqlIndexer;
-                sqlIndexer++;
-                JLabel lblExportSQL = new JLabel("SQL : " + sqlIndexer);
-                panelSQLInputData.add(lblExportSQL, cSQL);
-                sqlIndexer--;
-
-                cSQL.gridx = 1;
-                cSQL.gridy = 2 + sqlIndexer;
-                cSQL.gridwidth = 4;
-                cSQL.weightx = 0.0D;
-                panelSQLInputData.add(textArea, cSQL);
-                sqlIndexer++;
-                sqlPanelRight.add(panelSQLInputData, "North");
-                listOfSQL.add(textArea);
-                mapOfSQLLabel.put(textArea, lblExportSQL);
-
-            }
-            btRemoveSQL.setEnabled(true);
-        }
-
-        if (e.getSource() == btRemoveSQL) {
-            if (!listOfSQL.isEmpty())
-                if (!listOfSQL.get(listOfSQL.size() - 1).getText().equals("")) {
-
-                    int dialogButton = JOptionPane.YES_NO_OPTION;
-                    int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete " + listOfSQL.get(listOfSQL.size() - 1).getText() + "?", "Warning", dialogButton);
-                    if (dialogResult == 0) {
-                        deleteSQL();
-                    }
-
-                } else {
-                    deleteSQL();
-                }
-
-        }
-
         if (e.getSource() == btConvertSchema) {
             try {
                 if (listOfSchema.get(0).getText().equals("")) {
@@ -928,8 +787,9 @@ public class Trigger extends JPanel
                     showSuccessDialog("OWL ontology created successfully!!!");
 
                 }
-                if (listofOntologies.size() >= 2)
+                if (listofOntologies.size() >= 2) {
                     btMergeSchema.setEnabled(true);
+                }
 
             } catch (RuntimeException e1) {
                 showExceptionDialog(e1.getMessage());
@@ -943,16 +803,33 @@ public class Trigger extends JPanel
 
         if (command.equals("Merge")) {
             try {
-                mo = new MergeOntology();
+                btAddSchema.setEnabled(false);
+                btRemoveSchema.setEnabled(false);
+                Object[] alignmentMethods = {"NativeAlignment", "ClassStructAlignment",
+                        "EditDistNameAlignment", "NameAndPropertyAlignment", "NameEqAlignment",
+                        "SMOANameAlignment", "StringDistAlignment", "StrucSubsDistAlignment", "SubsDistNameAlignment"};
+                String method = (String) JOptionPane.showInputDialog(this, "Choose one of these Alignment Methods", "Alignment Methods", JOptionPane.PLAIN_MESSAGE, null, alignmentMethods, alignmentMethods[0]);
+
+                if (Strings.isNullOrEmpty(method)) {
+                    method = "NativeAlignment";
+                }
+
+                String trim = null;
+                if (!method.equals("NativeAlignment")) {
+                    trim = JOptionPane.showInputDialog(this, "Enter the trim value", "0.5");
+                }
+                if (Strings.isNullOrEmpty(trim)) {
+                    trim = "0.5";
+                }
+                mo = new MergeOntology(manager, this, method, Double.parseDouble(trim));
                 if (listofOntologies.isEmpty() || listofOntologies.size() < 2) {
                     checkMerge(null);
                 } else {
                     checkMerge(listofOntologies);
-                    mo.merge(manager, this);
+                    mo.merge();
                     mergedOntology = mo.getMergedOntology();
                     btConvertOntology.setEnabled(true);
-                //    btConvertOntologyFromSQL.setEnabled(true);
-                    showSuccessDialog("Ontologies are merged succesfully!!!");
+                    showSuccessDialog("Ontologies are merged successfully!!!");
                 }
             } catch (Exception e1) {
                 showExceptionDialog(e1.getMessage());
@@ -1051,18 +928,6 @@ public class Trigger extends JPanel
             connectionList.setSelectedItem(item);
             connectionList.setActionCommand("comboBoxChanged");
             setConnectionData(item);
-        }
-    }
-
-    private void deleteSQL() {
-        JTextArea t = listOfSQL.remove(listOfSQL.size() - 1);
-        panelSQLInputData.remove(t);
-        JLabel l = mapOfSQLLabel.remove(t);
-        panelSQLInputData.remove(l);
-        sqlIndexer--;
-        sqlPanelRight.add(panelSQLInputData, "North");
-        if (sqlIndexer == 1) {
-            btRemoveSQL.setEnabled(false);
         }
     }
 

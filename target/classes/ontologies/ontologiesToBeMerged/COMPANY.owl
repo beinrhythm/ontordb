@@ -20,17 +20,6 @@
     
 
 
-    <!-- Dn -->
-
-    <owl:ObjectProperty rdf:about="Dn">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dnumber</rdfs:comment>
-        <rdfs:range rdf:resource="Department"/>
-        <rdfs:domain rdf:resource="Dept_Locations"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- Dno -->
 
     <owl:ObjectProperty rdf:about="Dno">
@@ -44,8 +33,10 @@
     <!-- Dnum -->
 
     <owl:ObjectProperty rdf:about="Dnum">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dnumber</rdfs:comment>
         <rdfs:range rdf:resource="Department"/>
+        <rdfs:domain rdf:resource="Dept_Locations"/>
         <rdfs:domain rdf:resource="Project"/>
     </owl:ObjectProperty>
     
@@ -345,12 +336,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="Fname"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="Lname"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
